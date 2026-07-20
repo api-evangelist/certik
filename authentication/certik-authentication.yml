@@ -1,0 +1,18 @@
+generated: '2026-07-18'
+method: searched
+source: openapi/certik-skynet-openapi.yml
+docs: https://api.certik-skynet.com/public-docs/authentication
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: CertikApiKey
+  type: apiKey
+  in: header
+  parameter: X-Certik-Api-Key
+  description: Partner API key issued by the CertiK Business Team, sent on every request in
+    the X-Certik-Api-Key header.
+  sources:
+  - openapi/certik-skynet-openapi.yml
