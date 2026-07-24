@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for CertiK Partner (Skynet) API
+  version: 1.0.0
+extends: openapi/certik-skynet-openapi.yml
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-rating: 3
+      x-apievangelist-source-docs: https://api.certik-skynet.com/public-docs/
+      x-api-category: web3-security
+  - target: $.tags
+    update:
+      - name: Security Score
+        description: Skynet multi-metric blockchain project security scores.
+      - name: Token Scan
+        description: Real-time on-chain token contract security analysis.

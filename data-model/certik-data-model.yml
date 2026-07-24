@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/certik-skynet-openapi.yml
+entities:
+  - name: SecurityScore
+    description: Skynet multi-metric security score for a blockchain project.
+    id_field: certiKProjectId
+    key_fields: [certiKProjectId, securityScore, highlights, alerts]
+    endpoints:
+      - openapi/certik-skynet-openapi.yml#listSecurityScores
+      - openapi/certik-skynet-openapi.yml#getSecurityScore
+  - name: TokenScan
+    description: On-chain security analysis of a single token contract.
+    key_fields: [token_info, token_meta, market_info, skyknight_score, security_summary]
+    endpoints:
+      - openapi/certik-skynet-openapi.yml#queryTokenScan
+      - openapi/certik-skynet-openapi.yml#queryTokenScanBatch
+relationships:
+  - from: TokenScan
+    to: SecurityScore
+    type: belongs_to
+    via: contract-address / certiKProjectId
+    notes: >-
+      A project's Security Score can be looked up by the same chain-prefixed
+      contract address a Token Scan is run against; the linkage is by address,
+      not an explicit foreign key in the response.

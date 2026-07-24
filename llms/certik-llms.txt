@@ -1,0 +1,33 @@
+# CertiK Partner (Skynet) API
+
+> CertiK is a leading Web3 security platform. Its Partner (Skynet) API exposes CertiK's security intelligence: the Skynet Security Score API returns multi-metric security scores for blockchain projects, and the Token Scan API returns real-time on-chain security analysis of token contracts across major chains. Access is by partner API key (X-Certik-Api-Key header) issued by the CertiK Business Team.
+
+## APIs
+
+- [CertiK Partner API Portal](https://api.certik-skynet.com/public-docs/): Developer documentation for the Skynet Security Score and Token Scan APIs.
+- [Authentication](https://api.certik-skynet.com/public-docs/authentication): API-key header authentication (X-Certik-Api-Key), base URL https://partner.certik-skynet.com.
+- [Version History](https://api.certik-skynet.com/public-docs/version-history): Dated changelog of API releases.
+
+## Endpoints
+
+- GET /v1/security-scores — list project Skynet security scores (skip/limit/partnerData).
+- GET /v1/security-scores/{id} — get a project's security score by CertiK Project ID or contract address.
+- GET /v1/token-scan/contract/query — scan a single token contract.
+- GET /v1/token-scan/contract/query/batch — scan multiple token contracts in bulk.
+
+## Specs
+
+- [OpenAPI (API Evangelist-generated)](https://raw.githubusercontent.com/api-evangelist/certik/refs/heads/main/openapi/certik-skynet-openapi.yml)
+
+## Docs
+
+- [Skynet Score Methodology](https://api.certik-skynet.com/public-docs/methodology/security-score-methods)
+- [CertiK Emulator](https://api.certik-skynet.com/public-docs/methodology/dynamic-emulator)
+- [Trust and Security (SOC 2 Type II, ISO 27001)](https://www.certik.com/company/trust-and-security)
+- [Bug Bounty Program](https://www.certik.com/company/bug-bounty)
+- [Blog](https://www.certik.com/blog)
+- [GitHub](https://github.com/CertiKProject)
+
+## Contact
+
+- API support: APIsupport@certik.com

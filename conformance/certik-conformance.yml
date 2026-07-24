@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+source:
+  - openapi/certik-skynet-openapi.yml
+  - https://www.certik.com/company/trust-and-security
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: API uses a static API-key header (X-Certik-Api-Key), not OAuth2.
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {code,message,data} envelope, not application/problem+json.
+  - id: rest-json
+    conforms: true
+    evidence: JSON-over-HTTPS REST endpoints under /v1.
+  - id: offset-pagination
+    conforms: true
+    evidence: /v1/security-scores paginates with skip/limit and a page object.
+  - id: soc2-type2
+    conforms: true
+    evidence: CertiK is SOC 2 Type II compliant (Trust and Security page).
+  - id: iso-27001
+    conforms: true
+    evidence: CertiK is ISO 27001 certified (Trust and Security page).

@@ -1,8 +1,30 @@
 aid: certik
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/certik.png
 name: CertiK
-description: 'CertiK is a company surfaced as a portfolio company of insight-partners, lightspeed-venture-partners,
-  softbank-vision-fund, wing-venture-capital and added to the API Evangelist network as a stub for enrichment.
-  Sector: cybersecurity. This profile is a lead awaiting the enrichment pipeline.'
+description: >-
+  CertiK is a leading Web3 security platform that combines AI, formal verification,
+  and expert audits to secure blockchain protocols and smart contracts. Its Partner
+  (Skynet) API exposes CertiK's security intelligence to integrators: the Skynet
+  Security Score API returns comprehensive, multi-metric security scores for
+  blockchain projects (score, rank, tier, percentile, highlights and alerts), and
+  the Token Scan API returns real-time on-chain security analysis of token contracts
+  across major chains (token info, market and holder data, a SkyKnight score, and a
+  severity-ranked security summary). Access is by partner API key issued by the
+  CertiK Business Team, sent in the X-Certik-Api-Key header against
+  https://partner.certik-skynet.com. CertiK is a portfolio company of Insight
+  Partners, Lightspeed Venture Partners, SoftBank Vision Fund and Wing Venture Capital.
 url: https://raw.githubusercontent.com/api-evangelist/certik/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,20 +33,110 @@ x-backed-by:
 - lightspeed-venture-partners
 - softbank-vision-fund
 - wing-venture-capital
-x-tier: stub
+x-tier: enriched
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Cybersecurity
-apis: []
+- Web3
+- Blockchain
+- Smart Contract Security
+- Security Auditing
+- Threat Intelligence
+apis:
+- aid: certik:certik-security-score-api
+  name: CertiK Security Score API
+  description: Skynet multi-metric project security scores.
+  humanURL: https://api.certik-skynet.com/public-docs/
+  baseURL: https://partner.certik-skynet.com
+  tags:
+  - Security Score
+  properties:
+  - type: OpenAPI
+    url: openapi/certik-security-score-api-openapi.yml
+  - type: Documentation
+    url: https://api.certik-skynet.com/public-docs/
+  - type: APIReference
+    url: https://api.certik-skynet.com/public-docs/apis/security-score
+  - type: GettingStarted
+    url: https://api.certik-skynet.com/public-docs/authentication
+- aid: certik:certik-token-scan-api
+  name: CertiK Token Scan API
+  description: Real-time on-chain token contract security analysis.
+  humanURL: https://api.certik-skynet.com/public-docs/
+  baseURL: https://partner.certik-skynet.com
+  tags:
+  - Token Scan
+  properties:
+  - type: OpenAPI
+    url: openapi/certik-token-scan-api-openapi.yml
+  - type: Documentation
+    url: https://api.certik-skynet.com/public-docs/
+  - type: APIReference
+    url: https://api.certik-skynet.com/public-docs/apis/security-score
+  - type: GettingStarted
+    url: https://api.certik-skynet.com/public-docs/authentication
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://api.certik-skynet.com/public-docs/
+- type: Documentation
+  url: https://api.certik-skynet.com/public-docs/
+- type: APIReference
+  url: https://api.certik-skynet.com/public-docs/apis/security-score
+- type: Authentication
+  url: authentication/certik-authentication.yml
+- type: AgenticAccess
+  url: agentic-access/certik-agentic-access.yml
+- type: MCPServer
+  url: mcp/certik-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/certik-llms.txt
+- type: ErrorCatalog
+  url: errors/certik-problem-types.yml
+- type: Conventions
+  url: conventions/certik-conventions.yml
+- type: DataModel
+  url: data-model/certik-data-model.yml
+- type: Conformance
+  url: conformance/certik-conformance.yml
+- type: Compliance
+  url: https://www.certik.com/company/trust-and-security
+- type: TrustCenter
+  url: security/certik-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/certik-vulnerability-disclosure.yml
+- type: Security
+  url: https://www.certik.com/company/bug-bounty
+- type: DomainSecurity
+  url: security/certik-domain-security.yml
+- type: Lifecycle
+  url: lifecycle/certik-lifecycle.yml
+- type: ChangeLog
+  url: changelog/certik-changelog.yml
+- type: Overlay
+  url: overlays/certik-skynet-overlay.yaml
+- type: Blog
+  url: https://www.certik.com/blog
+- type: GitHubOrganization
+  url: https://github.com/CertiKProject
+- type: PrivacyPolicy
+  url: https://www.certik.com/company/privacy-policy
+- type: Support
+  url: mailto:APIsupport@certik.com
 - type: Website
   url: https://www.certik.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/certik-skynet-openapi.yml
+server:
+  name: certik-skynet
+  transport: http
+  url: null
+  notes: No official CertiK MCP server found; tool list derived from the Partner API operations.
+tools:
+  - name: list_security_scores
+    description: List paginated project Skynet security scores.
+    source_operation: openapi/certik-skynet-openapi.yml#listSecurityScores
+  - name: get_security_score
+    description: Get the Skynet security score for one project by ID or contract address.
+    source_operation: openapi/certik-skynet-openapi.yml#getSecurityScore
+  - name: query_token_scan
+    description: Run a security scan on a single token contract.
+    source_operation: openapi/certik-skynet-openapi.yml#queryTokenScan
+  - name: query_token_scan_batch
+    description: Run security scans on multiple token contracts in bulk.
+    source_operation: openapi/certik-skynet-openapi.yml#queryTokenScanBatch

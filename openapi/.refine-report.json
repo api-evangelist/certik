@@ -1,0 +1,16 @@
+{
+  "provider": "certik",
+  "sources": [
+    "certik-security-score-api-openapi.yml",
+    "certik-token-scan-api-openapi.yml"
+  ],
+  "outputs": [
+    "certik-security-score-api-openapi.yml",
+    "certik-token-scan-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://api.certik-skynet.com/public-docs/
+authentication:
+  style: api-key-header
+  header: X-Certik-Api-Key
+  docs: https://api.certik-skynet.com/public-docs/authentication
+  ref: authentication/certik-authentication.yml
+base_url: https://partner.certik-skynet.com
+idempotency:
+  supported: false
+  notes: No idempotency-key contract documented (read-only GET surface).
+pagination:
+  style: offset
+  params: [skip, limit]
+  response_fields: [items, page]
+  applies_to: [/v1/security-scores]
+error_envelope:
+  shape: { code: integer, message: string, data: object }
+  ref: errors/certik-problem-types.yml
+versioning:
+  style: uri-path
+  current: v1
+  ref: lifecycle/certik-lifecycle.yml
+rate_limit_signaling:
+  documented: false
+metadata:
+  partner_data: >-
+    The partnerData query flag on /v1/security-scores includes partner metadata
+    in each entry.

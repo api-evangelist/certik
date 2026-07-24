@@ -1,0 +1,12 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/certik-skynet-openapi.yml
+skills:
+  - file: certik-check-project-security-score.md
+    name: Check a project's Skynet security score
+    api: openapi/certik-skynet-openapi.yml
+    operations: [listSecurityScores, getSecurityScore]
+  - file: certik-scan-token-contract.md
+    name: Scan a token contract for risk
+    api: openapi/certik-skynet-openapi.yml
+    operations: [queryTokenScan, queryTokenScanBatch]

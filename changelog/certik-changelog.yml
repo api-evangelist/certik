@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+source: https://api.certik-skynet.com/public-docs/version-history
+scheme: semver
+current_version: 1.4.2
+entries:
+  - version: 1.4.2
+    date: null
+    status: current
+    additions:
+      - "/v1/token-scan: expanded with Sui chain support."
+  - version: 1.4.1
+    date: '2025-10-13'
+    additions:
+      - "/v1/token-scan: expanded with Plasma chain support."
+  - version: 1.3.4
+    date: '2025-08-08'
+    highlights:
+      - "Resources: updated Skynet Score Methodology and reference link."
+  - version: 1.3.3
+    date: '2025-05-07'
+    highlights:
+      - "Guide: documented API response structure for /v1/token-scan and /v1/security-scores."
+      - "Resources: added methodology for the Skynet Score and Token Scan API."
+  - version: 1.3.2
+    date: '2025-05-05'
+    additions:
+      - "/v1/token-scan: supported Ton chain."
+  - version: 1.3.1
+    date: '2025-04-17'
+    additions:
+      - "/v1/token-scan: added address labeling for top token holders."
+      - "/v1/token-scan: added top LP holders for V2 and V3 liquidity pools."
+  - version: 1.2.3
+    date: '2025-01-07'
+    additions:
+      - "/v1/token-scan: included LP Holder Lock Check."
+  - version: 1.2.2
+    date: '2024-12-26'
+    additions:
+      - "/v1/token-scan: introduced Token Buy/Sell Restriction Check."
+  - version: 1.2.1
+    date: '2024-11-26'
+    additions:
+      - "/v1/token-scan: extended support to Base and Arbitrum chains."
+  - version: 1.2.0
+    date: '2024-09-10'
+    additions:
+      - "/v1/security-score: launched the Security Score API with detailed security highlights."
+      - "/v1/token-scan: launched the Token Scan API for in-depth token security insights."

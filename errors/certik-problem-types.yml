@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://api.certik-skynet.com/public-docs/errors
+derived_from: openapi/certik-skynet-openapi.yml
+format: custom
+envelope:
+  description: >-
+    Errors are returned as a JSON object with a numeric code, a human-readable
+    message, and an optional data object.
+  fields: [code, message, data]
+problems:
+  - status: 400
+    title: Bad Request
+    message: The server could not process the request, likely due to an invalid parameters.
+    remediation: Check the query/path parameters against the endpoint documentation.
+    source_operations:
+      - openapi/certik-skynet-openapi.yml#listSecurityScores
+      - openapi/certik-skynet-openapi.yml#getSecurityScore
+      - openapi/certik-skynet-openapi.yml#queryTokenScan
+      - openapi/certik-skynet-openapi.yml#queryTokenScanBatch
+  - status: 403
+    title: Forbidden
+    message: The 'X-Certik-Api-Key' header is invalid or missing.
+    remediation: Include a valid X-Certik-Api-Key header; request a key from the CertiK Business Team (APIsupport@certik.com).
+    source_operations:
+      - openapi/certik-skynet-openapi.yml#listSecurityScores
+      - openapi/certik-skynet-openapi.yml#queryTokenScan
+  - status: 500
+    title: Internal Server Error
+    message: An unexpected server issue was encountered.
+    remediation: Retry the request; if the error persists contact CertiK API support.
+    source_operations:
+      - openapi/certik-skynet-openapi.yml#listSecurityScores
+      - openapi/certik-skynet-openapi.yml#queryTokenScan
