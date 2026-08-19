@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "CertiK Partner (Skynet) Security Score Token Scan API",
+    "version": "1.4.2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Certik-Api-Key",
+      "value": "{{X-Certik-Api-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Token Scan",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Scan a single token contract",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://partner.certik-skynet.com/v1/token-scan/contract/query"
+          },
+          "docs": "Returns comprehensive token analysis for a single contract, including token info, market info, SkyKnight score, and a security summary of risk flags with severity levels."
+        },
+        {
+          "info": {
+            "name": "Scan multiple token contracts in bulk",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://partner.certik-skynet.com/v1/token-scan/contract/query/batch"
+          },
+          "docs": "Returns token scan results for multiple contracts in a single request."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

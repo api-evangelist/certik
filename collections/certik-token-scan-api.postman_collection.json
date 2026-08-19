@@ -1,0 +1,498 @@
+{
+  "item": [
+    {
+      "id": "9eb73ce0-a340-4505-be68-621d0ecbce10",
+      "name": "Token Scan",
+      "description": {
+        "content": "Real-time on-chain token contract security analysis.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "147055a5-be3d-4eed-b234-8386dd7d9bf7",
+          "name": "Scan a single token contract",
+          "request": {
+            "name": "Scan a single token contract",
+            "description": {
+              "content": "Returns comprehensive token analysis for a single contract, including token info, market info, SkyKnight score, and a security summary of risk flags with severity levels.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "token-scan",
+                "contract",
+                "query"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c8605b3d-270e-4c61-9370-a01e24c2aba1",
+              "name": "Token scan result.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "token-scan",
+                    "contract",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Certik-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 7642,\n  \"message\": \"string\",\n  \"data\": {\n    \"token_info\": {},\n    \"token_meta\": {},\n    \"market_info\": {},\n    \"skyknight_score\": {},\n    \"security_summary\": {},\n    \"created_at\": \"2005-06-14T21:04:48.358Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2eecbf0e-5ef7-4198-a6a5-e84405375494",
+              "name": "The server could not process the request, likely due to invalid parameters.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "token-scan",
+                    "contract",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Certik-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3144,\n  \"message\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ac50f56f-b361-4762-8fd4-69e1ce565761",
+              "name": "The 'X-Certik-Api-Key' header is invalid or missing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "token-scan",
+                    "contract",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Certik-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3144,\n  \"message\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d501ea5e-8a1f-45cb-adfc-89c813df4b15",
+              "name": "An unexpected server issue was encountered.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "token-scan",
+                    "contract",
+                    "query"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Certik-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3144,\n  \"message\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "36729c81-7821-4ed1-a637-f71e3ef0d3ae",
+          "name": "Scan multiple token contracts in bulk",
+          "request": {
+            "name": "Scan multiple token contracts in bulk",
+            "description": {
+              "content": "Returns token scan results for multiple contracts in a single request.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "token-scan",
+                "contract",
+                "query",
+                "batch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f10be20b-1768-4c3f-af14-12f0fadd8a98",
+              "name": "Batch of token scan results.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "token-scan",
+                    "contract",
+                    "query",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Certik-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 7642,\n  \"message\": \"string\",\n  \"data\": {\n    \"token_info\": {},\n    \"token_meta\": {},\n    \"market_info\": {},\n    \"skyknight_score\": {},\n    \"security_summary\": {},\n    \"created_at\": \"2005-06-14T21:04:48.358Z\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1ad3bd48-dc04-4e4b-8933-70098acf340c",
+              "name": "The server could not process the request, likely due to invalid parameters.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "token-scan",
+                    "contract",
+                    "query",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Certik-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3144,\n  \"message\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "29e5b105-3bce-4a33-ab44-7ed2e4906b03",
+              "name": "The 'X-Certik-Api-Key' header is invalid or missing.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "token-scan",
+                    "contract",
+                    "query",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Certik-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3144,\n  \"message\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d5005748-2058-4915-b07f-2f74c68c3752",
+              "name": "An unexpected server issue was encountered.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "token-scan",
+                    "contract",
+                    "query",
+                    "batch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-Certik-Api-Key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3144,\n  \"message\": \"string\",\n  \"data\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://partner.certik-skynet.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Certik-Api-Key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6c211926-2bf1-453e-a853-15159593eba2",
+    "name": "CertiK Partner (Skynet) Security Score Token Scan API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "CertiK Partner API (Skynet) exposes CertiK's Web3 security intelligence: the Skynet Security Score API returns comprehensive, multi-metric security scores for blockchain projects, and the Token Scan API returns real-time on-chain security analysis of token contracts across major chains. Access is by API key issued to partners by the CertiK Business Team. This spec was generated by the API Evangelist enrichment pipeline from CertiK's published Partner API documentation; it is not an official CertiK-published OpenAPI.\n\nContact Support:\n Name: CertiK API Support\n Email: APIsupport@certik.com",
+      "type": "text/plain"
+    }
+  }
+}

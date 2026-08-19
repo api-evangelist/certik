@@ -1,0 +1,76 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "CertiK Partner (Skynet) Security Score API",
+    "version": "1.4.2"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "X-Certik-Api-Key",
+      "value": "{{X-Certik-Api-Key}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Security Score",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List project security scores",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://partner.certik-skynet.com/v1/security-scores",
+            "params": [
+              {
+                "name": "skip",
+                "value": "",
+                "type": "query",
+                "description": "Pagination offset (number of records to skip)."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of records to return per page."
+              },
+              {
+                "name": "partnerData",
+                "value": "",
+                "type": "query",
+                "description": "When set, includes partner metadata in each entry."
+              }
+            ]
+          },
+          "docs": "Returns a paginated JSON object of project-level Skynet security score entries, including the overall score, rank, tier, percentile, category metrics, highlights and alerts."
+        },
+        {
+          "info": {
+            "name": "Get a single project security score",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://partner.certik-skynet.com/v1/security-scores/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "CertiK Project ID or chain-prefixed contract address."
+              }
+            ]
+          },
+          "docs": "Retrieves the Skynet security score for a single project by CertiK Project ID or by chain-prefixed primary contract address."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
