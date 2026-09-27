@@ -98,14 +98,14 @@ components:
           - object
           - 'null'
   responses:
-    BadRequest:
-      description: The server could not process the request, likely due to invalid parameters.
+    Forbidden:
+      description: The 'X-Certik-Api-Key' header is invalid or missing.
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Error'
-    Forbidden:
-      description: The 'X-Certik-Api-Key' header is invalid or missing.
+    BadRequest:
+      description: The server could not process the request, likely due to invalid parameters.
       content:
         application/json:
           schema:
