@@ -88,38 +88,6 @@ paths:
           $ref: '#/components/responses/InternalServerError'
 components:
   schemas:
-    Page:
-      type: object
-      properties:
-        skip:
-          type: integer
-        limit:
-          type: integer
-        total:
-          type: integer
-    Error:
-      type: object
-      description: Standard CertiK API error envelope.
-      properties:
-        code:
-          type: integer
-          description: HTTP status code.
-        message:
-          type: string
-          description: Success or failure message.
-        data:
-          type:
-          - object
-          - 'null'
-    SecurityScoreList:
-      type: object
-      properties:
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/SecurityScore'
-        page:
-          $ref: '#/components/schemas/Page'
     SecurityScore:
       type: object
       properties:
@@ -144,7 +112,45 @@ components:
           type: array
           items:
             type: object
+    Page:
+      type: object
+      properties:
+        skip:
+          type: integer
+        limit:
+          type: integer
+        total:
+          type: integer
+    SecurityScoreList:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/SecurityScore'
+        page:
+          $ref: '#/components/schemas/Page'
+    Error:
+      type: object
+      description: Standard CertiK API error envelope.
+      properties:
+        code:
+          type: integer
+          description: HTTP status code.
+        message:
+          type: string
+          description: Success or failure message.
+        data:
+          type:
+          - object
+          - 'null'
   responses:
+    InternalServerError:
+      description: An unexpected server issue was encountered.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
     Forbidden:
       description: The 'X-Certik-Api-Key' header is invalid or missing.
       content:
@@ -153,12 +159,6 @@ components:
             $ref: '#/components/schemas/Error'
     BadRequest:
       description: The server could not process the request, likely due to invalid parameters.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    InternalServerError:
-      description: An unexpected server issue was encountered.
       content:
         application/json:
           schema:
