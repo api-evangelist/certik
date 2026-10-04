@@ -59,25 +59,6 @@ paths:
         '500':
           $ref: '#/components/responses/InternalServerError'
 components:
-  responses:
-    InternalServerError:
-      description: An unexpected server issue was encountered.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    Forbidden:
-      description: The 'X-Certik-Api-Key' header is invalid or missing.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
-    BadRequest:
-      description: The server could not process the request, likely due to invalid parameters.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/Error'
   schemas:
     TokenScanResponse:
       type: object
@@ -116,6 +97,25 @@ components:
           type:
           - object
           - 'null'
+  responses:
+    InternalServerError:
+      description: An unexpected server issue was encountered.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    Forbidden:
+      description: The 'X-Certik-Api-Key' header is invalid or missing.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    BadRequest:
+      description: The server could not process the request, likely due to invalid parameters.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
   securitySchemes:
     CertikApiKey:
       type: apiKey
