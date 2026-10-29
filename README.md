@@ -64,6 +64,119 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CertiK is a company surfaced as a portfolio company of insight-partners, lightspeed-venture-partners, softbank-vision-fund, wing-venture-capital and added to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting the enrichment pipeline.
+CertiK is a leading Web3 security platform that combines AI, formal verification, and expert audits to secure blockchain protocols and smart contracts. Its Partner (Skynet) API exposes CertiK's security intelligence to integrators: the Skynet Security Score API returns comprehensive, multi-metric security scores for blockchain projects (score, rank, tier, percentile, highlights and alerts), and the Token Scan API returns real-time on-chain security analysis of token contracts across major chains (token info, market and holder data, a SkyKnight score, and a severity-ranked security summary). Access is by partner API key issued by the CertiK Business Team, sent in the X-Certik-Api-Key header against https://partner.certik-skynet.com. CertiK is a portfolio company of Insight Partners, Lightspeed Venture Partners, SoftBank Vision Fund and Wing Venture Capital.
 
-Backed by: insight-partners, lightspeed-venture-partners, softbank-vision-fund, wing-venture-capital — https://www.certik.com/
+**Areas:** Company · Cybersecurity · Web3 · Blockchain · Smart Contract Security · Security Auditing · Threat Intelligence
+
+## CertiK on APIs.io
+
+Everything profiled for CertiK is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/certik/](https://apis.io/providers/certik/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [CertiK Security Score API](https://apis.io/apis/certik/certik-security-score-api/) — Skynet multi-metric project security scores.
+- [CertiK Token Scan API](https://apis.io/apis/certik/certik-token-scan-api/) — Real-time on-chain token contract security analysis.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [certik-skynet](https://apis.io/servers/certik/certik-skynet/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Certik Agentic Access](https://apis.io/agentic-access/certik/certik-agentic-access/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [CertiK Partner (Skynet) Security Score API](https://apis.io/collections/certik/open-certik-security-score-api/)
+- [CertiK Partner (Skynet) Security Score Token Scan API](https://apis.io/collections/certik/open-certik-token-scan-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Certik Skynet Overlay](https://apis.io/overlays/certik/certik-skynet-overlay/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Certik Authentication](https://apis.io/security/certik/certik-authentication/)
+- [Certik Domain Security](https://apis.io/security/certik/certik-domain-security/)
+- [Certik Trust Center](https://apis.io/security/certik/certik-trust-center/)
+- [Certik Vulnerability Disclosure](https://apis.io/security/certik/certik-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.certik.com/)
+- [Documentation](https://api.certik-skynet.com/public-docs/)
+- [API reference](https://api.certik-skynet.com/public-docs/apis/security-score)
+- [Blog](https://www.certik.com/blog)
+- [Security](https://www.certik.com/company/bug-bounty)
+- [Compliance](https://www.certik.com/company/trust-and-security)
+- [Privacy policy](https://www.certik.com/company/privacy-policy)
+- [GitHub](https://github.com/CertiKProject)
+
+## API Evangelist rating
+
+**Kin Score 36.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 13.9 |
+| Contract governance | 18.2 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 58.9 |
+| Access clarity | 26.3 |
+
+**Agent readiness 24.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 31.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/certik/](https://apis.io/providers/certik/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CertiK: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/certik/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
